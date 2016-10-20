@@ -1,0 +1,945 @@
+/*
+Theme Name: ASUKI TEMPLATE 01
+Description:  あすきオリジナルテンプレートテーマ[01]
+Version: 1.1
+Author: Manae Ohigashi [ twitter: @ManaeOhigashi]
+*/
+
+/*
+* “こころ明朝体” licensed under the IPA Font License Agreement v1.0
+* http://typingart.net/（“こころ明朝体”配布元のURL）
+* http://ipafont.ipa.go.jp/（IPAフォントのURL）
+* http://ipafont.ipa.go.jp/ipa_font_license_v1.html（IPAフォントライセンスv1.0のURL）
+*/
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Amaranth);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic);
+@font-face{ 
+	font-family: 'Kokoro';
+	src: url('font/Kokoro.eot'); /* IE9以上用 */
+	src: url('font/Kokoro?#iefix') format('embedded-opentype'), /* IE8以前用 */
+		url('font/Kokoro.woff') format('woff'), /* モダンブラウザ用 */
+		url('font/Kokoro.ttf') format('truetype'); /* iOS, Android用 */
+	font-weight: normal;
+	font-style: normal;
+}
+.fontEN {
+    font-family: 'Amaranth', "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", Verdana, sans-serif;
+    letter-spacing: 3px;
+}
+.fontENmin { font-family: 'Noto Serif', 'Kokoro','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','ＭＳ Ｐ明朝','MS PMincho',serif;}
+.fontJP {
+    font-family: 'Kokoro','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','ＭＳ Ｐ明朝','MS PMincho',serif;
+}
+/*------------------------ RESET --------------------*/
+* { font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", Verdana, sans-serif;}
+html, body { width: 100%; height: 100%;}
+/*-- RESET STYLE --*/
+
+html,body,div,span,
+applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+dd,dl,dt,li,ol,ul,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	font-family: inherit;
+	text-align: left;
+	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+ol,ul {
+	list-style: none;
+	}
+q:before,q:after,
+blockquote:before,blockquote:after {
+	content: "";
+	}
+h1,h2,h3,h4,h5,h6,strong,h1 em,h2 em, h3 em,h4 em,h5 em,h6 em,strong em,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+	font-weight: bold;
+	}
+        
+* {
+	box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-o-box-sizing: border-box;
+}
+button:focus { outline: none;}
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+     border-radius: 0;
+}
+input:focus,
+textarea:focus,
+select:focus { outline: none;}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #F2F2F2 inset;
+    -webkit-text-fill-color: #000;
+}
+
+/* clear */
+ul:after,
+ol:after {
+    content: ".";
+    clear: both;
+    display: block;
+    font-size: 0.1em;
+    height: 0.1px;
+    line-height: 0;
+    visibility: hidden;
+    width: 0.1px;
+} 
+
+.clear { clear:both;}
+/* forIE clear */
+.clear {
+    clear: both;
+    height: 0.1px;
+    margin: 0px;
+    padding: 0px;
+    width: 0.1px;
+}
+
+/*------------------------ BASE --------------------*/
+html,
+body {
+	background-color: #FEFEFD;
+	font-size: 13.5px;
+	line-height: 26px;
+	font-family: 'Noto Sans Japanese', sans-serif;
+}
+.mainContainer {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+a,
+.fade {
+	text-decoration: none;
+        -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.floatL { float: left;}
+.floatR { float: right;}
+.floatC { margin: 0 auto!important; display: inline-block!important; float: none!important;}
+.textL { text-align: left!important;}
+.textR { text-align: right!important;}
+.textC { text-align: center!important;}
+
+#scrollbar::-webkit-scrollbar {
+        overflow:hidden;
+        width:10px;
+        background: #ddd;
+}
+#scrollbar::-webkit-scrollbar-thumb { background-color: #999;}
+#scrollbar::-webkit-scrollbar:horizontal { height:5px;}
+#scrollbar::-webkit-scrollbar-button { display:none;}
+#scrollbar::-webkit-scrollbar-piece { background:#ddd;}
+#scrollbar::-webkit-scrollbar-piece:start { background:#ddd;}
+#scrollbar::-webkit-scrollbar-thumb { overflow:hidden;}
+#scrollbar::-webkit-scrollbar-corner {
+        overflow:hidden;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        background:#ddd;
+}
+
+/*------------------------ HEADER --------------------*/
+header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 65px;
+    top: 0;
+}
+.headerIntro {
+    width: auto;
+    height: 40px;
+    padding: 0;
+    margin-left: 5%;
+    margin-top: 10px;
+    display: block;
+    float: left;
+}
+.headLogo h1 {
+    width: 100%;
+    height: 100%;
+}
+.headLogo h1 img {
+    height: 100%;
+    width: auto;
+}
+.headerNav {
+    line-height: 60px;
+    font-size: 13.5px;
+    float: left;
+    width: auto;
+    margin-left: 3%;
+}
+.headNav li { height: 100%;}
+.headNav li a { height: 100%; padding: 0 10px; letter-spacing: 5px;}
+.headNav li a:hover img { opacity: 0.8;}
+
+.dropmenu{ *zoom: 1; list-style-type: none;}
+.dropmenu:before, .dropmenu:after{ content: ""; display: table;}
+.dropmenu:after{ clear: both;}
+.dropmenu li a{ display: block; margin: 0;}
+
+.shareBox { position: absolute; right: 5px; top: 0;}
+.shareBox span { float: left; color: #fff; margin-right: 10px;}
+.shareBox img { width: 25px; margin: 15.5px 5px 0 0;}
+
+/*------------------------ FOOTER --------------------*/
+#footer {
+    width: 100%;
+    padding: 80px 10% 60px;
+    position: relative;
+}
+.footNav { width: 50%;}
+.footForm { width: 40%;}
+.footNav img { width: 130px; margin: 0 0 20px;}
+.footNav ul a li {
+    font-size: 15px;
+    color: #fff;
+    width: 33.33%;
+    float: left;
+    line-height: 35px;
+}
+.footInfo {
+    color: #fff;
+    font-size: 12px;
+    line-height: 19px;
+    position: absolute;
+    bottom: 60px;	
+}
+.footInfo span { font-size: 30px; line-height: 40px;}
+
+.footForm .cntTitle { text-align: left; margin-bottom: 20px;}
+.footForm .sub { font-size: 12px; line-height: 18px; margin-bottom: 20px;}
+
+input:focus,
+textarea:focus { outline: none;}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #999 inset;
+    -webkit-text-fill-color: #fff;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px #fff solid;
+    background: none;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-family: 'Amaranth', sans-serif;
+    letter-spacing: 3px;
+}
+textarea { height: 150px; line-height: 22px;}
+div.wpcf7-mail-sent-ok {
+    border: 0!important;
+    font-weight: bold;
+    display: block;
+    clear: both;
+    margin: 0px!important;
+}
+input[type="submit"] {
+    border: 0;
+    border-radius: 0;
+    width: 150px;
+    padding: 8px 0;
+    letter-spacing: 3px;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 15px;
+    float: right;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border: 0!important;
+    margin: 0 7px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.formCheck { width: 200px; float: left;}
+.shareSNS { margin-top: 30px;}
+.fb-share-button { /* Facebook */
+    display: inline-block;
+    height: 20px;
+    overflow: hidden;
+}
+.fb_iframe_widget span {
+    vertical-align: top !important;
+}
+
+/*------------------------ HOME --------------------*/
+.homeSlider { width: 100%; height: 100%; overflow: hidden;}
+.sliderArea {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.pogoSlider-slide { width: 100vw!important; height: 100vh!important; display: table;}
+.homeInfoList {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.newsCnt { display: table-cell; vertical-align: middle;}
+.homeConcept dt {
+    width: 90px;
+    float: left;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.homeConcept dd {
+    width: 100%;
+    padding-left: 95px;
+    margin-top: -30px;
+    float: left;
+    font-size: 13px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -mos-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.homeConcept dd a { text-decoration: underline;}
+.pogoSlider { padding-bottom: 100%!important;}
+.pogoSlider-dir-btn,
+.pogoSlider-progressBar { display: none;}
+.homeSliderCatch {
+    color: #fff;
+    text-shadow: 0 3px 8px rgba(100,100,100,0.6);
+    display: table-cell;
+    vertical-align: middle;
+}
+.homeSliderCatch p { text-align: center;}
+.homeSliderCatch .title {
+    width: 800px;
+    margin: 0 auto 50px;
+    text-transform: uppercase;
+    font-size: 70px;
+    line-height: 75px;
+}
+.homeSliderCatch .sliderText {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: bold;
+    width: 800px;
+    margin: 0 auto;
+}
+.pogoSlider,
+.pogoSlider-slide { overflow: inherit!important;}
+
+#homeConcept {
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+}
+.homeMovie { width: 50%; height: 500px; background-color: #2b2b2b;}
+.homeMovie.comingsoon {
+	background-image: url('images/comingsoon.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 70%;
+}
+.homeMovie  iframe { width: 100%; height: 100%;}
+.homeConcept {
+    width: 50%;
+    height: 500px;
+    display: table;
+    color: #fff;
+    position: relative;
+}
+.cntTitle {
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cntCatch {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: -3px;
+}
+.cntCatch.fontENmin {
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 25px;
+}
+#homeCheese {
+    width: 100%;
+    height: auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#homeInfo {
+	width: 100%;
+	height: 550px;
+}
+.homeInfo,
+.homeFB { width: 50%; height: 550px; display: table;}
+.homeFB { background-color: #fff;}
+.homeInfo .table,
+.homeFB .table {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 8% 0 10%;
+    text-align: center;
+}
+.infoDL { width: 100%;}
+.infoDL div { padding: 8px 0; clear: both;}
+.infoDL dt {
+    width: 15%;
+    float: left;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-family: 'Amaranth', sans-serif;
+    text-align: right;
+}
+.infoDL dd {
+    width: 85%;
+    float: left;
+    line-height: 25px;
+    padding-left: 20px;
+}
+.infoDL dd a { text-decoration: underline;}
+.titleImg { height: 30px; margin-bottom: 30px;}
+.areaFB { width: 100%; height: 350px; overflow-y: auto;}
+/*---------Custom Facebook Feed--------*/
+.cff-item {
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.cff-item a { text-decoration: none; }
+#cff .cff-author .cff-author-text * { margin: 0 0 0 80px!important;}
+.cff-page-name {
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: bold;
+    font-family: 'Amaranth','Kokoro', sans-serif;
+    letter-spacing: 2px;
+}
+.cff-date {
+    font-size: 16px!important;
+    line-height: 30px!important;
+    font-family: 'Noto Serif', serif;
+}
+.cff-author-img img {
+    width: 60px;
+    height: 60px;
+}
+.cff-post-text {
+    clear: both;
+    width: 100%;
+    padding: 20px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cff-expand, .cff-media-link { display: none;}
+.cff-viewpost-facebook {
+    pointer-events: auto;
+    display: block;
+    width: 200px;
+    font-size: 12px!important;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    text-decoration: none!important;
+    font-weight: bold;
+    margin: 20px 0 0 0!important;
+    clear: both;
+}
+#cff .cff-item { overflow-x: hidden;}
+
+#map_custmomize { width: 100%; height: 450px;}
+#map_custmomize iframe {pointer-events:none;}
+
+/*------------------------ PAGE --------------------*/
+.firstSection { margin-top: 60px;}
+.textLink {
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 2px;
+}
+.secTitle { font-size: 40px;}
+
+/*------------------------ SHOP INFO --------------------*/
+#shopinfoCnt { width: 100%; background-color: #fff;}
+.shopinfoImg { width: 40%; height: 100%;}
+#slideshow {
+   position:relative;
+   width:100%;
+   height:700px;
+}
+#slideshow li {
+   position:absolute;
+   height:700px;
+   width: 100%!important;
+   margin:0;
+   padding:0;
+   background-position:center top;
+   background-size: auto 100%;
+   background-repeat:no-repeat;
+}
+#shopinfoCnt .homeInfo { width: 60%; height: auto; margin-top: 7%;}
+#shopinfoCnt .homeInfo .table {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 650px;
+    display: block;
+    padding: 0;
+}
+#shopinfoCnt .infoDL dd a { font-weight: bold;}
+#shopinfoCnt .cntCatch { font-size: 14px; letter-spacing: 0; line-height: 23px;}
+
+/*------------------------ CONCEPT --------------------*/
+.cnt01 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0!important;
+}
+.cnt01 .conceptSub {
+    width: 60%;
+    padding: 5% 7%;
+    height: auto;
+    float: right;
+}
+.conceptImg {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.cnt02 { width: 100%; padding: 80px 5% 40px 0; background-color: #fff;}
+.conceptCnt .homeInfo { color: #fff!important;}
+.conceptCnt .cntCatch { font-size: 23px!important; letter-spacing: -3px!important;}
+.cntBox { width: 65%; float: right; font-size: 17px; line-height: 28px;}
+.conceptSub iframe { width: 750px; height: 420px;}
+
+/*------------------------ NEWS --------------------*/
+#newsCnt {
+    width: 80%;
+    margin: 60px auto 0;
+    padding: 80px 0;
+    text-align: center;
+}
+.newsList { width: 65%; float: left; margin-top: 40px;}
+.newsList li {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 10px;
+    position: relative;
+}
+.deco01, .deco02 { font-size: 11px; position: absolute; top: 5px; left: 10px;}
+.deco02 { left: inherit; right: 10px;}
+.newsListCnt { padding: 50px 40px 30px;}
+.newsListCnt img { max-width: 400px;}
+.newsTitle {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 25px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.newsDate {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+.recentList {
+    width: 32%;
+    float: right;
+    margin-top: 40px;
+    background-color: #ddd;
+    padding: 40px 30px;
+}
+.recentList .cntTitle { font-size: 22px; letter-spacing: 5px; margin-bottom: 30px;}
+.recentListCnt li {
+    margin: 0 0 20px;
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+.recentListCnt a { line-height: 20px;}
+.pagerBtn { padding: 0 20px;}
+.pagerBtn:hover { background-color: #ddd}
+.pagerBtnAll {
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: -20px auto;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+/*------------------------ MENU --------------------*/
+#dinnermenu {
+    width: 100%;
+    text-align: center;
+    padding: 80px 0 60px;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+.pageAnchor { width: 80%; margin: 30px auto; text-align: center;}
+.pageAnchor a {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+.menuCnt {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+.dinnerList { background-color: #fff; padding: 5%; margin-bottom: 40px;}
+.menuCatTitle {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+    display: block;
+    letter-spacing: 10px;
+}
+.menuCatTitleJP { display: block; font-weight: bold; font-size: 18px; margin-bottom: 40px; text-align: center;}
+.dinnerList li {
+    width: 49.5%;
+    padding: 0 3%;
+    margin-bottom: 15px;
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: top;
+}
+.dinnerList .titleEN { font-size: 20px; letter-spacing: 1px;}
+.dinnerList .titleJP { float: left;}
+.dinnerList .price { font-size: 20px; float: right; margin-bottom: 10px;}
+.dinnerList .price span { font-size: 13px;}
+.dinnerList .line { width: 100%; clear: both;}
+.menuTagTitle {
+    background-color: #ddd;
+    width: 100%;
+    max-width: 400px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.tagmargin { margin-top: 20px;}
+.dinnerList img {
+    width: 35%;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 10px;
+}
+.menuSubCnt { display: table-cell;}
+.dinnerList .sub {
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #FFF6D1;
+    padding: 5px 10px;
+    clear: both;
+}
+.menuTextCnt {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    background-image: url("images/white70.png");
+    margin: -20px auto 0;
+    text-align: center;
+}
+.menuNotice {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.catChildName {
+    background-color: #eee;
+    clear: both;
+    width: 94%;
+    display: inline-block;
+    display: -ms-grid;
+    margin: 20px 0 20px 3%;
+    padding: 3px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/**************************************** Small PC (1200px↓) ****************************************/
+@media screen and (max-width:1200px) {
+/*------------------------ HEADER --------------------*/
+#left-to-right li:hover ul { height: 200px;}
+/*------------------------ FOOTER --------------------*/
+.footNav ul a li {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 5px 0;
+}
+/*------------------------ HOME --------------------*/
+
+/*------------------------ CONCEPT --------------------*/
+.cnt02 .conceptSub { width: 100%; text-align: center;}
+.cnt02 { padding: 80px 0 40px 0;}
+
+}
+
+/**************************************** TABLET (1024px↓) ****************************************/
+@media screen and (max-width:1024px) {
+/*------------------------ HEADER --------------------*/
+.headNav li a { padding: 0 8px; letter-spacing: 3px;}
+#left-to-right li:hover ul { height: 450px;}
+.shareBox span { margin-right: 5px; letter-spacing: 0;}
+/*------------------------ FOOTER --------------------*/
+#footer { padding: 40px 5% 30px;}
+.footNav, .footForm { width: 100%;}
+.footInfo {
+    position: static;
+    margin-top: 30px;
+    border-top: 1px #fff solid;
+    padding-top: 30px;
+}
+.footNav {
+    border-top: 1px #fff solid;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+.footNav img {
+    width: 130px;
+    margin: 0 6% 0 0;
+    float: left;
+}
+.footNav ul a li { width: 24%;}
+
+/*------------------------ HOME --------------------*/
+.homeSliderCatch .title {
+    width: 500px;
+    margin: 0 auto 30px;
+    font-size: 50px;
+    line-height: 55px;
+}
+.homeSliderCatch .sliderText { width: 500px;}
+#homeConcept, #homeInfo { height: auto;}
+.homeMovie { width: 100%; height: 400px;}
+.homeConcept {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 40px 0;
+    clear: both;
+}
+.cntTitle { margin-bottom: 30px;}
+#homeCheese { padding: 40px 0;}
+.homeInfo, .homeFB {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 40px 0;
+}
+.homeInfo .table, .homeFB .table { display: block;}
+.pogoSlider-nav { display: none!important;}
+.newsCnt { display: block; vertical-align: inherit;}
+
+/*------------------------ NEWS --------------------*/
+.newsList, .recentList { width: 100%; margin-top: 20px;}
+
+/*------------------------ CONCEPT --------------------*/
+.conceptImg {
+    width: 100%;
+    height: 400px;
+    position: static;
+}
+.cnt01 .conceptSub { width: 100%; padding: 30px 5%;}
+
+/*------------------------ MENU --------------------*/
+.menuCnt, .pageAnchor { width: 90%;}
+.dinnerList li,
+.dinnerList li:nth-child(even),
+.dinnerList li.drinks:nth-child(even),
+.dinnerList li.drinks:nth-child(odd) { width: 100%; padding: 0;}
+.pageAnchor a {
+    padding: 5px 5px;
+    margin: 4px 2.5px;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+.catChildName { width: 100%; margin: 20px 0;}
+
+}
+
+/**************************************** SMART PHONE (768px↓) ****************************************/
+@media screen and (max-width:768px) {
+.SPnone { display: none;}
+/*------------------------ HEADER --------------------*/
+.headerNav {
+    padding-left: 0px;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0;
+    font-size: 16px;
+}
+.drawer-main { display: table;}
+.headNav { display: table-cell; vertical-align: middle;}
+.headNav li { height: initial;}
+.headNav img {
+    width: auto;
+    height: 45px;
+    margin: 0 auto 40px;
+    display: block;
+    float: none;
+}
+.headNav li a {
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    float: left;
+}
+.shareBox {
+    position: absolute;
+    right: 50%;
+    top: initial;
+    bottom: 20px;
+    width: 150px;
+    margin-right: -75px;
+}
+.mapIconSP {
+    width: 35px;
+    position: absolute;
+    right: 65px;
+    top: 12px;
+}
+
+/*------------------------ FOOTER --------------------*/
+.footNav img { display: none;}
+.footNav ul a li { width: 50%;}
+.shareSNS { margin-top: 20px;}
+
+/*------------------------ HOME --------------------*/
+.sliderArea { width: 100%; padding: 60px 0 0;}
+.homeSlider { background-size: auto 30%;}
+.pogoSlider-slide {
+    display: initial;
+    background-position: center center;
+}
+.homeSliderCatch .title {
+    width: 90%;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    line-height: 45px;
+}
+.homeSliderCatch .sliderText {
+    width: 90%;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
+.homeSliderCatch {
+    display: block;
+    vertical-align: initial;
+    margin-top: 20%!important;
+}
+.homeMovie { height: 200px;}
+.cntTitle { margin-bottom: 20px; font-size: 25px; letter-spacing: 5px; line-height: 27px;}
+.cntCatch { font-size: 18px; margin-bottom: 20px;}
+#homeCheese { padding: 40px 5%; text-align: left;}
+.homeInfoList { width: 90%;}
+.homeInfo .table, .homeFB .table { padding: 0 5% 0;}
+.cntCatch.fontENmin { letter-spacing: 0; font-size: 18px; line-height: 24px;}
+.infoDL dt {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+}
+.infoDL dd { width: 100%; padding-left: 0;}
+.areaFB { height: 200px;}
+#map_custmomize { height: 200px;}
+.footInfo a { color: #fff;}
+.homeMovie.comingsoon { background-size: 100%;}
+
+/*------------------------ SHOP IMFO --------------------*/
+#shopinfoCnt .homeInfo,
+.shopinfoImg { width: 100%;}
+#slideshow { height: 250px;}
+#slideshow li { height: 250px; background-size: cover; background-position: center center;}
+#shopinfoCnt .homeInfo { margin-top: 0;}
+#shopinfoCnt .homeInfo .table { width: 90%; text-align: left;}
+
+/*------------------------ NEWS --------------------*/
+#newsCnt { width: 95%; padding: 40px 0 30px;}
+.newsListCnt { padding: 30px 10px 15px;}
+.newsList li { margin-bottom: 20px;}
+
+/*------------------------ MENU --------------------*/
+#dinnermenu {
+    padding: 40px 2.5% 0;
+    background-image: none;
+    line-height: 19px;
+    font-size: 13px;
+}
+.pageAnchor, .menuCnt { width: 100%; margin: 20px auto 0;}
+.menuCatTitle { font-size: 20px; letter-spacing: 4px;}
+.menuCatTitleJP { font-size: 15px; margin-bottom: 15px;}
+.dinnerList .titleEN { display: none}
+.dinnerList { margin-bottom: 20px;}
+.dinnerList .titleJP { font-weight: bold; margin-bottom: 5px;}
+.menuTextCnt { margin: -10px auto;}
+.menuNotice { text-align: left; line-height: 18px;}
+
+/*------------------------ CONCEPT --------------------*/
+.cnt01, .cnt02 { padding: 40px 2.5% 10px;}
+.conceptSub { width: 100%; z-index: 10; position: relative;}
+.cntBox { width: 100%; margin-right: 0; font-size: 14px; line-height: 22px;}
+.concept #homeCheese { padding: 40px 2.5%;}
+.conceptImg { height: 200px;}
+.conceptSub iframe { width: 90%; height: 220px;}
+.conceptCnt .cntCatch { font-size: 20px!important;}
+}
+/****************************************  (770px↑) ****************************************/
+@media screen and (min-width: 770px) {
+.PCnone { display: none!important;}
+.footInfo, .footNav { border-top: none!important;}
+}
