@@ -156,5 +156,6 @@ body,
 .recentListCnt li,
 .dinnerList .line { border-bottom: 1px <?php echo get_option('main_color_textW'); ?> dashed;}
 </style>
+<?php wp_footer(); ?>
 </body>
 </html>
